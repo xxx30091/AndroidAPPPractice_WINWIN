@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android APP Practice_WINWIN</string>
+    <string name="likes">點讚</string>
+    <string name="favorite">收藏</string>
+    <string name="comments">評論</string>
+    <string name="viewers">觀看</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

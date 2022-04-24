@@ -9,7 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingEnd="4dp">
 
         <TextView
             android:id="@+id/tv_tab"
@@ -17,6 +18,9 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="11sp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:background="@color/gray_cccccc"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="故事" />

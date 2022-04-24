@@ -1,4 +1,4 @@
-package com.arthurtang.androidapppractice_winwin
+package com.arthurtang.androidapppractice_winwin.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,7 +20,7 @@ class MainFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = FragmentMainBinding.inflate(inflater, container, false)
 
-        
+
 
 
 

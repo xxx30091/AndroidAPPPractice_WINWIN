@@ -21,8 +21,12 @@ class MainFragment : Fragment() {
         val binding = FragmentMainBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
+        val adapter = MainAdapter(viewModel.content.value)
+        binding.rvMainPage.adapter = adapter
 
-
+        viewModel.contentData.observe(viewLifecycleOwner) {
+            adapter.submitList(it)
+        }
 
         return binding.root
     }

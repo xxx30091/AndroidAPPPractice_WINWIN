@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var toolbar: androidx.appcompat.widget.Toolbar
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,10 +21,5 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         binding.toolbar.visibility = View.VISIBLE
         supportActionBar?.setDisplayShowTitleEnabled(false)
-
-    }
-
-    private fun setupActionBar() {
-
     }
 }

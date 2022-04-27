@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import com.arthurtang.androidapppractice_winwin.data.ContentData
+import com.arthurtang.androidapppractice_winwin.data.User
 import com.arthurtang.androidapppractice_winwin.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
@@ -27,6 +29,51 @@ class MainFragment : Fragment() {
         viewModel.contentData.observe(viewLifecycleOwner) {
             adapter.submitList(it)
         }
+
+//        val mock = listOf(
+//            ContentData(
+//                title = "AAA",
+//                content = "AAAAAAAAAAAAAAAAAAAAAAA",
+//                user = User(nickName = "a", imageUrl = ""),
+//                favoriteCount = 111,
+//                likeCount = 112,
+//                commentCount = 113,
+//                unlockCount = 114,
+//                tags = listOf("A", "a", "Aa"),
+//                type = 1,
+//                imageUrls = listOf("","",""),
+//                creationDate = "2022.01.01"
+//            ),
+//            ContentData(
+//                title = "BBB",
+//                content = "BBBBBBBBBBBBBBBBBBBBBBB",
+//                user = User(nickName = "b", imageUrl = ""),
+//                favoriteCount = 221,
+//                likeCount = 222,
+//                commentCount = 223,
+//                unlockCount = 224,
+//                tags = listOf("B", "b", "Bb"),
+//                type = 2,
+//                imageUrls = listOf("","",""),
+//                creationDate = "2022.02.02"
+//            ),
+//            ContentData(
+//                title = "CCC",
+//                content = "CCCCCCCCCCCCCCCCCCCCCCC",
+//                user = User(nickName = "c", imageUrl = ""),
+//                favoriteCount = 331,
+//                likeCount = 332,
+//                commentCount = 333,
+//                unlockCount = 334,
+//                tags = listOf("C", "c"),
+//                type = 1,
+//                imageUrls = listOf("","",""),
+//                creationDate = "2022.01.01"
+//            )
+//        )
+//
+//        adapter.submitList(mock)
+
 
         return binding.root
     }

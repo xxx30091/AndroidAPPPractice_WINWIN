@@ -1,6 +1,7 @@
 package com.arthurtang.androidapppractice_winwin.main
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -21,6 +22,18 @@ class MainAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(content: ContentData) {
             binding.content = content
+
+//            if (content.tags[0] == null) {
+//                binding.tvContent1Tag1.visibility = View.GONE
+//
+//                if (content.tags[1] == null) {
+//                    binding.tvContent1Tag2.visibility = View.GONE
+//
+//                    if (content.tags[2] == null) {
+//                        binding.tvContent1Tag3.visibility = View.GONE
+//                    }
+//                }
+//            }
         }
     }
 
@@ -28,6 +41,18 @@ class MainAdapter(
         RecyclerView.ViewHolder(binding.root) {
         fun bind(content: ContentData) {
             binding.content = content
+
+//            if (content.tags[0] == null) {
+//                binding.tvContent2Tag1.visibility = View.GONE
+//
+//                if (content.tags[1] == null) {
+//                    binding.tvContent2Tag2.visibility = View.GONE
+//
+//                    if (content.tags[2] == null) {
+//                        binding.tvContent2Tag3.visibility = View.GONE
+//                    }
+//                }
+//            }
         }
     }
 
@@ -51,6 +76,9 @@ class MainAdapter(
             is Content1ViewHolder -> {
                 holder.bind(getItem(position) as ContentData)
             }
+            is Content2ViewHolder -> {
+                holder.bind(getItem(position) as ContentData)
+            }
         }
     }
 
@@ -69,12 +97,10 @@ class MainAdapter(
 
     override fun getItemViewType(position: Int): Int {
 
-        return when (content?.type) {
+        return when (getItem(position).type) {
             2 -> ITEM_VIEW_TYPE_1
             1 -> ITEM_VIEW_TYPE_2
             else -> throw ClassCastException("Unknown viewType: ${content?.type}")
         }
     }
 }
-
-//sealed class

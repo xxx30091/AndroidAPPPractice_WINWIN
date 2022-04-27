@@ -154,19 +154,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--        <androidx.recyclerview.widget.RecyclerView-->
-<!--            android:id="@+id/rv_content_tabs"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:orientation="horizontal"-->
-<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/tv_content"-->
-<!--            tools:itemCount="3"-->
-<!--            tools:listitem="@layout/item_tabs" />-->
-
         <TextView
             android:id="@+id/tv_content_1_like_title"
             android:layout_width="wrap_content"

@@ -1,15 +1,12 @@
 package com.arthurtang.androidapppractice_winwin.network
 
-import com.arthurtang.androidapppractice_winwin.BuildConfig
 import com.arthurtang.androidapppractice_winwin.data.ContentData
-import com.arthurtang.androidapppractice_winwin.data.Data
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
 import retrofit2.http.GET
 
 private const val HOST_NAME = "raw.githubusercontent.com/winwiniosapp"

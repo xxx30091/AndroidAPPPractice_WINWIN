@@ -6,7 +6,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.arthurtang.androidapppractice_winwin.data.ContentData
-import com.arthurtang.androidapppractice_winwin.data.Data
 import com.arthurtang.androidapppractice_winwin.network.LoadApiStatus
 import com.arthurtang.androidapppractice_winwin.network.WinWinApi
 import kotlinx.coroutines.Job
@@ -14,12 +13,6 @@ import kotlinx.coroutines.launch
 import java.lang.Exception
 
 class MainViewModel: ViewModel() {
-
-//    private val _data = MutableLiveData<ContentData?>()
-//    val data: LiveData<ContentData?>
-//    private val _data = MutableLiveData<Data?>()
-//    val data: LiveData<Data?>
-//        get() = _data
 
     private val _contentData = MutableLiveData<List<ContentData?>?>()
     val contentData: LiveData<List<ContentData?>?>
@@ -43,7 +36,6 @@ class MainViewModel: ViewModel() {
         viewModelScope.launch {
             try {
                 _contentData.value = WinWinApi.retrofitService.getData()
-//                _content.value =
                 _status.value = LoadApiStatus.DONE
                 Log.i("getData", "mainViewModel launch")
             } catch (e: Exception) {

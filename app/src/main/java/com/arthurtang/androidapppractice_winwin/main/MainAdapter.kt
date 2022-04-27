@@ -1,58 +1,28 @@
 package com.arthurtang.androidapppractice_winwin.main
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.arthurtang.androidapppractice_winwin.data.ContentData
-import com.arthurtang.androidapppractice_winwin.data.Data
 import com.arthurtang.androidapppractice_winwin.databinding.ItemContent1Binding
 import com.arthurtang.androidapppractice_winwin.databinding.ItemContent2Binding
 
-class MainAdapter(
-    private val content: ContentData?
-//    private val content: Data?
-): ListAdapter<ContentData, RecyclerView.ViewHolder>(DiffCallBack) {
+class MainAdapter(private val content: ContentData?) :
+    ListAdapter<ContentData, RecyclerView.ViewHolder>(DiffCallBack) {
 
-//    val content: ContentData? = null
-
-    class Content1ViewHolder(private var binding: ItemContent1Binding) :
+    class Content1ViewHolder(private var binding: ItemContent1Binding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(content: ContentData) {
             binding.content = content
-
-//            if (content.tags[0] == null) {
-//                binding.tvContent1Tag1.visibility = View.GONE
-//
-//                if (content.tags[1] == null) {
-//                    binding.tvContent1Tag2.visibility = View.GONE
-//
-//                    if (content.tags[2] == null) {
-//                        binding.tvContent1Tag3.visibility = View.GONE
-//                    }
-//                }
-//            }
         }
     }
 
-    class Content2ViewHolder(private var binding: ItemContent2Binding) :
+    class Content2ViewHolder(private var binding: ItemContent2Binding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(content: ContentData) {
             binding.content = content
-
-//            if (content.tags[0] == null) {
-//                binding.tvContent2Tag1.visibility = View.GONE
-//
-//                if (content.tags[1] == null) {
-//                    binding.tvContent2Tag2.visibility = View.GONE
-//
-//                    if (content.tags[2] == null) {
-//                        binding.tvContent2Tag3.visibility = View.GONE
-//                    }
-//                }
-//            }
         }
     }
 

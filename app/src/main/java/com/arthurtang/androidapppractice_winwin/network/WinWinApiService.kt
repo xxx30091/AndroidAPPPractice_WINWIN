@@ -32,8 +32,6 @@ private val retrofit = Retrofit.Builder()
 
 interface WinWinApiService {
     @GET("interview2.json")
-//    @GET("")
-//    suspend fun getData(): ContentData
     suspend fun getData(): List<ContentData>
 }
 

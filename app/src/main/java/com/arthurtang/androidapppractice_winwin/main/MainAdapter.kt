@@ -9,7 +9,7 @@ import com.arthurtang.androidapppractice_winwin.data.ContentData
 import com.arthurtang.androidapppractice_winwin.databinding.ItemContent1Binding
 import com.arthurtang.androidapppractice_winwin.databinding.ItemContent2Binding
 
-class MainAdapter(private val content: ContentData?) :
+class MainAdapter() :
     ListAdapter<ContentData, RecyclerView.ViewHolder>(DiffCallBack) {
 
     class Content1ViewHolder(private var binding: ItemContent1Binding):
@@ -70,7 +70,7 @@ class MainAdapter(private val content: ContentData?) :
         return when (getItem(position).type) {
             2 -> ITEM_VIEW_TYPE_1
             1 -> ITEM_VIEW_TYPE_2
-            else -> throw ClassCastException("Unknown viewType: ${content?.type}")
+            else -> throw ClassCastException("Unknown viewType: ${getItem(position).type}")
         }
     }
 }
